@@ -10,6 +10,6 @@ public class LogService {
     private final MyLogger myLogger;
 
     public String log(String id){
-        return myLogger.log(id);
+        return "JENKINS : "+myLogger.log(id);
     }
 }
