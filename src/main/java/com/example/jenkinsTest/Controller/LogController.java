@@ -16,13 +16,12 @@ public class LogController {
     private final LogService logService;
     private final MyLogger myLogger;
 
-    @RequestMapping("/")
-    @ResponseBody
+    @RequestMapping("/main")
     public String log(HttpServletRequest request){
         String requsetURL = request.getRequestURL().toString();
         myLogger.setURL(requsetURL);
         myLogger.log("Controller call!");
         String logMessage = logService.log("gaebabja");
-        return logMessage;
+        return "index";
     }
 }
